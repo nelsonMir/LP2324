@@ -8,11 +8,11 @@ sys.path.append(DIRECTORIO)
 
 from Lexer import CoolLexer
 
-PRACTICA = "01"  # Practica que hay que evaluar
+PRACTICA = "02"  # Practica que hay que evaluar
 DEBUG = True   # Decir si se lanzan mensajes de debug
 NUMLINEAS = 3   # Numero de lineas que se muestran antes y después de la no coincidencia
 sys.path.append(DIRECTORIO)
-CALIFICACION = "minimos" # Para un reto mayor cambiar a "grading"
+CALIFICACION = "grading" # Para un reto mayor cambiar a "grading"
 DIR = os.path.join(DIRECTORIO, PRACTICA, CALIFICACION)
 FICHEROS = os.listdir(DIR)
 TESTS = [fich for fich in FICHEROS
@@ -21,7 +21,7 @@ TESTS = [fich for fich in FICHEROS
 TESTS.sort()
 
 
-if True:
+if __name__ == '__main__':
     contador = len(TESTS)
     for fich in TESTS:
         lexer = CoolLexer()
@@ -42,15 +42,15 @@ if True:
             if texto.strip().split() != resultado.strip().split():
                 print(f"Revisa el fichero {fich}")
                 if DEBUG:
-                    texto = re.sub(r'#\d+\b','',texto)
-                    resultado = re.sub(r'#\d+\b','',resultado)
-                    nuestro = [linea for linea in texto.split('\n') if linea]
-                    bien = [linea for linea in resultado.split('\n') if linea]
+                    # texto = re.sub(r'#\d+\b','',texto)
+                    # resultado = re.sub(r'#\d+\b','',resultado)
+                    nuestro = '\n'.join(linea for linea in texto.split('\n') if linea.strip())
+                    bien = '\n'.join(linea for linea in resultado.split('\n') if linea.strip())
                     linea = 0
-                    f = open(os.path.join(DIR, fich)+'.nuestro', 'w')
-                    g = open(os.path.join(DIR, fich)+'.bien', 'w')
-                    f.write(texto.strip())
-                    g.write(resultado.strip())
+                    f = open(os.path.join(DIR, fich)+'.nuestro', 'w', encoding='utf-8')
+                    g = open(os.path.join(DIR, fich)+'.bien', 'w', encoding='utf-8')
+                    f.write(nuestro.strip())
+                    g.write(bien.strip())
                     f.close()
                     g.close()
                     contador -= 1

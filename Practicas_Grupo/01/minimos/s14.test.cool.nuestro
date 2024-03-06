@@ -1,5 +1,7 @@
 #name "s14.test.cool"
- OBJECTID token
- OBJECTID cmt
- OBJECTID token2
- OBJECTID cmt2
+#1 OBJECTID token
+#1 OBJECTID cmt
+#1 OBJECTID token
+#1 INT_CONST 2
+#1 OBJECTID cmt
+#1 INT_CONST 2

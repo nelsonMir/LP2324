@@ -1,18 +1,18 @@
 #name "multilinecomment.cool"
- OBJECTID comment
- OBJECTID also
- OBJECTID a
- OBJECTID comment
- OBJECTID not
- OBJECTID in
- OBJECTID a
- OBJECTID comment
- OBJECTID in
- OBJECTID a
- OBJECTID comment
- OBJECTID with
- OBJECTID many
- OBJECTID lines
- OBJECTID not
- OBJECTID a
- OBJECTID comment
+#1 OBJECTID comment
+#2 OBJECTID also
+#2 OBJECTID a
+#2 OBJECTID comment
+#3 NOT
+#3 IN
+#3 OBJECTID a
+#3 OBJECTID comment
+#4 IN
+#4 OBJECTID a
+#5 OBJECTID comment
+#6 OBJECTID with
+#7 OBJECTID many
+#8 OBJECTID lines
+#10 NOT
+#10 OBJECTID a
+#10 OBJECTID comment

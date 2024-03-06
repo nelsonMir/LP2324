@@ -1,21 +1,21 @@
 #name "operators.cool"
- OBJECTID some
- OBJECTID operators
- ASSIGN
- LE
- OBJECTID should
- OBJECTID be
- OBJECTID and
- LE
- LE
- OBJECTID should
- OBJECTID be
- LE
- OBJECTID and
- LE
- OBJECTID should
- OBJECTID be
- LE
- OBJECTID and
- LE
- ASSIGN
+#1 OBJECTID some
+#1 OBJECTID operators
+#2 ASSIGN
+#2 LE
+#4 OBJECTID should
+#4 OBJECTID be
+#4 OBJECTID and
+#4 LE
+#5 LE
+#7 OBJECTID should
+#7 OBJECTID be
+#7 LE
+#7 OBJECTID and
+#8 LE
+#10 OBJECTID should
+#10 OBJECTID be
+#10 LE
+#10 OBJECTID and
+#11 LE
+#13 ASSIGN

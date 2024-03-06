@@ -13,6 +13,47 @@ class CoolParser(Parser):
     debugfile = "salida.out"
     errores = []
 
-    @_("CLASS OBJECTID")
+    @_("Clase") #clase
     def Programa(self, p):
+
+        return Programa(secuencia=[p.Clase])
+
+    @_("Programa Clase") #subprograma u otra clase
+    def Programa(self, p):
+        
+        return Programa(secuencia=p.Programa.secuencia + [p.clase])
+
+    @_("CLASS TYPEID opcional '{' lista_atr_metodos '}'") #subprograma u otra clase
+    def Clase(self, p):
+        return Clase(nombre=p[1], padre = p[2], caracteristica = p[4])
+
+
+    @_("")
+    def opcionalPadre(self, p):
+    
+        return "Object"
+    @_("INHERITS TYPEID ")
+    def opcionalPadre(self, p):
+        return p[1]
+
+
+    @_("")
+    def list_atr_metodos(self, p):
         pass
+
+    @_("Atributo lista_atr_metodos ")
+    def list_atr_metodos(self, p):
+        pass
+
+    @_("Metodo lista_atr_metodos ")
+    def list_atr_metodos(self, p):
+        pass
+
+
+    @_("OBJECTID ':' TYPEID opcional_expr")
+    def Atributos(self, p):
+        pass
+        
+
+
+

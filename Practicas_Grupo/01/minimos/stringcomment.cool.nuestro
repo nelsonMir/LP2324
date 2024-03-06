@@ -1,24 +1,9 @@
 #name "stringcomment.cool"
- THIS
- OBJECTID is
- OBJECTID a
- OBJECTID string
- OBJECTID and
- OBJECTID it
- OBJECTID s
- OBJECTID still
- OBJECTID a
- OBJECTID string
- THIS
- OBJECTID is
- OBJECTID a
- OBJECTID comment
- OBJECTID not
- OBJECTID a
- OBJECTID string
- OBJECTID not
- OBJECTID a
- OBJECTID string
- OBJECTID not
- OBJECTID a
- OBJECTID comment
+#1 STR_CONST This is a string--and it's still a string
+#2 TYPEID This
+#2 OBJECTID is
+#2 OBJECTID a
+#2 OBJECTID comment
+#2 STR_CONST not a string
+#3 STR_CONST not a string
+#4 STR_CONST (* not a comment *)
