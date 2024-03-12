@@ -28,6 +28,30 @@ class CoolParser(Parser):
         return Clase(nombre=p[1], padre = p[2], caracteristica = p[4])
 
 
+
+    @_("'{' bloque '}'")
+    def expresion(self, p):
+        pass
+
+    @_("expresion ';'")
+    def bloque(self, p):
+        pass
+
+
+    @_("bloque expresion ';'")
+    def bloque(self, p):
+        pass
+
+
+    @_("eror ';'")
+    def bloque(self, p):
+        pass
+
+   
+    def error(self, p):
+        pass
+
+
     @_("")
     def opcionalPadre(self, p):
     
